@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  baidu_netdisk_dc:
+    container_name: baidu_netdisk
+    #command: /work/start.sh
+    #build: .
+    image: binacslee/baidu-netdisk:latest
+    environment:
+      DISPLAY_WIDTH: "1920"
+      DISPLAY_HEIGHT: "1080"
+    volumes:
+      - ./:/work
+    ports:
+      - 10000:10000
